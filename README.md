@@ -1,2 +1,2 @@
-# sensu-dockerized
+# sensu-core
 A dockerized version of Sensu monitoring framework 
