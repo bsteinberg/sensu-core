@@ -84,14 +84,6 @@ ENV LOG_DIR /var/log/sensu
 ENV LOG_LEVEL info
 ENV PID_DIR /var/run/sensu
 
-## Create a memory check 
-## -----------------------------------------------------------------------------
-RUN curl -sSLo /etc/sensu/conf.d/check_memory.json https://sensuapp.org/docs/${SENSU_MAJOR_VERSION}/files/check_memory.json
-
-## Create a default handler 
-## -----------------------------------------------------------------------------
-RUN curl -sSLo /etc/sensu/conf.d/default_handler.json https://sensuapp.org/docs/${SENSU_MAJOR_VERSION}/files/default_handler.json
-
 ## Setup permissions 
 ## -----------------------------------------------------------------------------
 RUN chown -R sensu:sensu /etc/sensu
